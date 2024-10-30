@@ -12,4 +12,3 @@ if [ "$CURSOR_SPEED" != "3" ]; then
     NEW_CURSOR_SPEED=$(defaults read NSGlobalDomain com.apple.mouse.scaling)
     echo "New cursor speed: $NEW_CURSOR_SPEED"
 fi
-
