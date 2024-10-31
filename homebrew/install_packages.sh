@@ -6,3 +6,6 @@ if ! command -v brew &> /dev/null; then
 fi
 
 brew install --cask 1password
+brew install --cask arc
+brew install --cask karabiner-elements
+brew install --cask raycast
