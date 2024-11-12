@@ -12,3 +12,19 @@ if [ "$CURSOR_SPEED" != "3" ]; then
     NEW_CURSOR_SPEED=$(defaults read NSGlobalDomain com.apple.mouse.scaling)
     echo "New cursor speed: $NEW_CURSOR_SPEED"
 fi
+
+# キーリピートの設定
+KEY_REPEAT=$(defaults read NSGlobalDomain KeyRepeat)
+if [ "$KEY_REPEAT" != "1" ]; then
+    echo "Setting KeyRepeat to fastest (1)..."
+    defaults write NSGlobalDomain KeyRepeat -int 1
+    echo "New KeyRepeat: $(defaults read NSGlobalDomain KeyRepeat)"
+fi
+
+# 初期リピートの設定
+INITIAL_KEY_REPEAT=$(defaults read NSGlobalDomain InitialKeyRepeat)
+if [ "$INITIAL_KEY_REPEAT" != "10" ]; then
+    echo "Setting InitialKeyRepeat to 10..."
+    defaults write NSGlobalDomain InitialKeyRepeat -int 10
+    echo "New InitialKeyRepeat: $(defaults read NSGlobalDomain InitialKeyRepeat)"
+fi

@@ -15,3 +15,5 @@ brew install --cask 1password
 brew install 1password-cli
 
 brew install --cask warp
+
+brew install --cask chatgpt
